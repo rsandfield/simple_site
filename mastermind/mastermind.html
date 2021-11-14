@@ -1,0 +1,123 @@
+
+<head>
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="mastermind.js"></script>
+</head>
+<body>
+    <h1>Mastermind</h1>
+    <div id="landing">
+        <form id="settings">
+            <table>
+                <tr>
+                    <th>
+                        Codemaker
+                    </th>
+                    <td>
+                        <input type="radio" id="cmc" name="codemaker" value="computer" checked>
+                        <label for="cmc">Computer</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="cmh" name="codemaker" value="human">
+                        <label for="cmh">Human</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Codebreaker
+                    </th>
+                    <td>
+                        <input type="radio" id="cbc" name="codebreaker" value="computer" checked>
+                        <label for="cbc">Computer</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="cbh" name="codebreaker" value="human">
+                        <label for="cbh">Human</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Turns
+                    </th>
+                    <td colspan=2>
+                        <input type="number" id="turns" value="10" min=1>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Pegs
+                    </th>
+                    <td colspan=2>
+                        <input type="number" id="pegs" value="4" min=1 max=6>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Colors
+                    </th>
+                    <td colspan=2>
+                        <input type="number" id="colors" value="6" min=2 max=8>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3>
+                        <input type="submit" name="return" value="Return" formaction="./index.html">
+                        <input type="submit" name="play" value="Play" formaction="JavaScript:startGame()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="game" style="display: none;">
+        <canvas id="canvas" width="220" height="450"></canvas>
+        <table>
+            <tr><td id="text" colspan="7"></td></tr>
+            <tr>
+                <td>Input:</td>
+                <td>
+                    <span class="dot" id="input0" onclick="theGame.callDropdown(event)"></span>
+                </td>
+                <td>
+                    <span class="dot" id="input1" onclick="theGame.callDropdown(event)"></span>
+                </td>
+                <td>
+                    <span class="dot" id="input2" onclick="theGame.callDropdown(event)"></span>
+                </td>
+                <td>
+                    <span class="dot" id="input3" onclick="theGame.callDropdown(event)"></span>
+                </td>
+                <td>
+                    <span class="dot" id="input4" onclick="theGame.callDropdown(event)"></span>
+                </td>
+                <td>
+                    <span class="dot" id="input5" onclick="theGame.callDropdown(event)"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <form action="index.html">
+                        <button>Home</button>
+                    </form>                    
+                </td>
+                <td colspan="2">
+                    <form action="mastermind.html">
+                        <button>New Game</button>
+                    </form>    
+                </td>
+                <td colspan="4">
+                    <button onclick="theGame.submit()">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="select" class="popup" style="display: none;">
+        <span class="dot" id="dot0" onclick="theGame.selectColor(event)"></span>
+        <span class="dot" id="dot1" onclick="theGame.selectColor(event)"></span>
+        <span class="dot" id="dot2" onclick="theGame.selectColor(event)"></span>
+        <span class="dot" id="dot3" onclick="theGame.selectColor(event)"></span>
+        <span class="dot" id="dot4" onclick="theGame.selectColor(event)"></span>
+        <span class="dot" id="dot5" onclick="theGame.selectColor(event)"></span>
+        <span class="dot" id="dot6" onclick="theGame.selectColor(event)"></span>
+        <span class="dot" id="dot7" onclick="theGame.selectColor(event)"></span>
+    </div>
+</body>

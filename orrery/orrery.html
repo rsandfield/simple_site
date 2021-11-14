@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orrery</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="orrery.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <canvas id="canvas" width="800" height="800"></canvas>
+            </td>
+            <td>
+                <p><button id="orbit" onclick="orrery.setViewMode('orbits')">Orbits</button></p>
+                <p><button id="lambert" onclick="orrery.setViewMode('lambert')">Lambert</button></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

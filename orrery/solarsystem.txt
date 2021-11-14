@@ -1,0 +1,31 @@
+Data starts on line:
+18
+Epoch is year, 0-index month, day, hour, minute, second. Trailing zeroes will
+be filled in by the parser.
+
+Bodies may be 'Star' or 'Planet', class followed by name and # of satellites.
+Sattelites are listed directly after primary bodies.
+Oribtal elements are as follows, angles in degrees:
+    Longitude of the ascending node
+    Inclination to the ecliptic (plane of the Earth's orbit)
+    Argument of periapsis
+    Semi-major axis, or mean distance from Sun in AU
+    Eccentricity (0=circle, 0-1=ellipse, 1=parabola)
+    Mean anomaly (0 at perihelion; increases uniformly with time)
+
+Data mostly pulled from: https://stjarnhimlen.se/comp/ppcomp.html
+
+Epoch:
+2000 0 0 0 0 0
+Class   Name    Sat Ascending   Inclination Arg. Peri.  Semi-Major  Ecc.        M. Anomaly  Mass        Color
+Star    Sol     9   0.0         0.0         0.0         0.0         0.0         0.0         1989        yellow
+Planet  Mercury 0   48.3313     7.0047      29.1241     57.90905    0.205635    168.6562    0.00033011  red
+Planet  Venus   0   76.6799     3.3946      54.8910     108.208     0.006773    48.0052     0.0048675   red
+Planet  Earth   1   0.0         0.0         282.9404    149.598023  0.016709    356.0470    0.005972    blue
+Planet  Luna    0   125.1228    5.1454      318.0634    0.3844      0.054900    115.3654    0.00007348  darkgray
+Planet  Mars    0   49.5574     1.8497      286.5016    227.9392    0.093405    18.6021     0.00064171  red
+Planet  Jupiter 0   100.4542    1.3030      273.8777    778.57      0.048498    19.8950     1.8982      orange
+Planet  Saturn  0   113.6634    2.4886      339.3939    1433.53     0.055546    316.9670    0.56834     orange
+Planet  Uranus  0   74.0005     0.7733      96.6612     2875.04     0.047318    142.5905    0.08681     blue
+Planet  Neptune 0   131.7806    1.7700      272.8461    4500.00     0.008606    260.2471    0.1024      blue
+Planet  Pluto   0   1.1024      1.7165      1.1515      5909        0.247862    1.4092      0.00001307  darkgray
