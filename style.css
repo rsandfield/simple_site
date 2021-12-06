@@ -9,6 +9,14 @@ canvas {
 	border: 2px white solid;
 }
 
+a {
+	color: white;
+	background-color: green;
+	outline: 1px solid gray;
+	padding: 5px;
+	margin: 2px;
+}
+
 form {
 	margin-block-end: 0em;
 }
